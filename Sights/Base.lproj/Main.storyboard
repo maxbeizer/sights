@@ -33,6 +33,7 @@
                                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                                     <real key="value" value="0.59999999999999998"/>
                                                 </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="corgi.jpg"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhX-19-lfE">
@@ -88,4 +89,7 @@
             <point key="canvasLocation" x="-812" y="-59"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="corgi.jpg" width="200" height="170"/>
+    </resources>
 </document>

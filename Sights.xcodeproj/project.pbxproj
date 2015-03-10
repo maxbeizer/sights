@@ -84,6 +84,7 @@
 		F7A6C7401AAE6D980041A3D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A6C7411AAE6D980041A3D1 /* CustomViewKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewKitTests.swift; sourceTree = "<group>"; };
 		F7A6C74E1AAE6DD30041A3D1 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		F7A6C7511AAE7FA60041A3D1 /* corgi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = corgi.jpg; path = ../../../../../Desktop/corgi.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		F7A6C6FB1AAE65B60041A3D1 = {
 			isa = PBXGroup;
 			children = (
+				F7A6C7501AAE7F660041A3D1 /* Test Images */,
 				F7A6C7061AAE65B60041A3D1 /* Sights */,
 				F7A6C71C1AAE65B60041A3D1 /* SightsTests */,
 				F7A6C72F1AAE6D980041A3D1 /* CustomViewKit */,
@@ -213,6 +215,15 @@
 				F7A6C7401AAE6D980041A3D1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7A6C7501AAE7F660041A3D1 /* Test Images */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6C7511AAE7FA60041A3D1 /* corgi.jpg */,
+			);
+			name = "Test Images";
+			path = Sights;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -689,6 +700,7 @@
 				F7A6C7251AAE65B60041A3D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7A6C7261AAE65B60041A3D1 /* Build configuration list for PBXNativeTarget "SightsTests" */ = {
 			isa = XCConfigurationList;
@@ -697,6 +709,7 @@
 				F7A6C7281AAE65B60041A3D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7A6C7471AAE6D980041A3D1 /* Build configuration list for PBXNativeTarget "CustomViewKit" */ = {
 			isa = XCConfigurationList;
@@ -705,6 +718,7 @@
 				F7A6C7491AAE6D980041A3D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7A6C74B1AAE6D980041A3D1 /* Build configuration list for PBXNativeTarget "CustomViewKitTests" */ = {
 			isa = XCConfigurationList;
@@ -713,6 +727,7 @@
 				F7A6C74D1AAE6D980041A3D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -19,7 +19,19 @@ class CustomView: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var rating: CGFloat = 0.7
+    
+    @IBInspectable var rating: CGFloat = 0.7 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+    
+    var imageLayer: CALayer! = nil
+    @IBInspectable var image:UIImage? {
+        didSet {
+            updateLayerProperties()
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -55,6 +67,25 @@ class CustomView: UIView {
         }
         
         ringLayer.frame = bounds
+        
+        if imageLayer == nil {
+            let imageMaskLayer = CAShapeLayer()
+            let insetBounds = CGRectInset(bounds, lineWidth + 3.0, lineWidth + 3.0)
+            let innerPath = UIBezierPath(ovalInRect: insetBounds)
+            
+            imageMaskLayer.path = innerPath.CGPath
+            imageMaskLayer.fillColor = UIColor.blackColor().CGColor
+            imageMaskLayer.frame = bounds
+            layer.addSublayer(imageMaskLayer)
+            
+            
+            imageLayer = CALayer()
+            imageLayer.mask = imageMaskLayer
+            imageLayer.frame = bounds
+            imageLayer.backgroundColor = UIColor.lightGrayColor().CGColor
+            layer.addSublayer(imageLayer)
+        }
+        
         updateLayerProperties()
     }
     
@@ -76,6 +107,19 @@ class CustomView: UIView {
             
             ringLayer.strokeColor = strokeColor.CGColor
         }
+        
+        if imageLayer !=  nil {
+            if let i = image {
+                imageLayer.contents = i.CGImage
+            }
+        }
     }
+    
+//    override func prepareForInterfaceBuilder() {
+//        super.prepareForInterfaceBuilder()
+//        var imageUrl: NSURL! = NSURL(string: "http://placecorgi.com/400/400")
+//        var imageData: NSData! = NSData(contentsOfURL: imageUrl)
+//        image = UIImage(data: imageData)
+//    }
     
 }
